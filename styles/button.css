@@ -1,0 +1,145 @@
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.button {
+    padding: 20px 105px;
+    width: fit-content;
+    border: 1px solid currentColor;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    font-family: Noah;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 400;
+    height: 74px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transition: border 500ms ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: white;
+    border: none;
+    border-color: transparent;
+    transition: border 500ms ease;
+}
+
+.button:active {
+    border: none;
+    background-color: #0c5e55;
+    border-color: #0c5e55;
+    color: white;
+}
+
+.disabled {
+    background-color: #f1f3f5 !important;
+    border-color: #f1f3f5 !important;
+    color: #b3b6bc !important;
+    pointer-events: none;
+}
+
+.button:hover .colored-background {
+    translate: 0 0;
+    transition: translate 500ms ease;
+}
+
+.button:hover .button__text {
+    translate: 0 0;
+}
+
+.colored-background {
+    position: absolute;
+    background-color: #13776c;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    translate: 100% 0;
+    transition: translate 500ms ease;
+}
+
+.button__text {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-family: Noah;
+}
+
+.smi {
+    height: auto;
+    width: 100%;
+    padding: 16px 0;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #13776c;
+    color: #13776c;
+    font-family: Noah;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1600px) {
+    .button {
+        font-size: 24px;
+    }
+
+    .smi {
+        font-size: 18px;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .button {
+        min-width: 240px;
+        padding: 18px 82px;
+        font-size: 18px;
+        height: 60px;
+    }
+
+    .button__text {
+        font-size: 18px;
+        line-height: 100%;
+    }
+
+    .smi {
+        font-size: 16px;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 482px) {
+    .button__container {
+        margin-top: 30px;
+    }
+
+    .button {
+        padding: 20px 0;
+        width: 100%;
+        font-size: 16px;
+        line-height: 100%;
+        align-items: center;
+        height: 60px;
+    }
+
+    .button__text {
+        height: 100%;
+        font-size: 16px;
+    }
+
+    .smi {
+        height: 50px;
+    }
+}

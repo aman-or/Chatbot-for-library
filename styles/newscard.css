@@ -1,0 +1,123 @@
+.news-card {
+    display: flex;
+    gap: 60px;
+}
+
+.swiper-wrapper {
+    display: flex;
+    overflow: hidden;
+    min-width: 647px;
+    max-width: 647px;
+}
+
+.news-card_img__container {
+    --width: 647px;
+    height: 400px;
+    min-width: 647px;
+    max-width: 647px;
+    overflow: hidden;
+    opacity: 1;
+    transition-duration: 0;
+    position: relative;
+}
+
+.news-card_img__container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.moving_img {
+    transition-duration: 850ms;
+}
+
+.hidden {
+    display: none;
+}
+
+.title {
+    font-family: IkraSlab;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 137%;
+    margin-bottom: 16px;
+    color: #1a1919;
+}
+
+.news_desc {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.news__info {
+    color: rgba(26, 25, 25, 0.5);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-family: Noah;
+    font-size: 16px;
+    line-height: 115%;
+    margin-bottom: 40px;
+}
+
+.text {
+    margin-bottom: 0 !important;
+}
+
+/* .movable {
+    transform: translate3d(0, 100px, 0);
+    opacity: 0.001;
+} */
+
+.text_up {
+    --delay: calc(300ms + var(--index) * 0.05s);
+    transform: translate3d(0, 0, 0);
+    opacity: 0.999;
+    transition: transform 850ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 450ms linear;
+    transition-delay: var(--delay);
+}
+
+.text__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.translate {
+    transition: translate 500ms;
+}
+
+.link_news {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1600px) {
+    .swiper-wrapper {
+        max-width: 560px;
+        min-width: 0;
+    }
+
+    .news-card {
+        gap: 30px;
+    }
+
+    .news-card_img__container {
+        min-width: 560px;
+        width: 560px;
+        max-width: 560px;
+        height: 382px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .link_news {
+        font-size: 18px;
+    }
+}

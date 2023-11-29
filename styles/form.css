@@ -1,0 +1,253 @@
+.form__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 140px;
+}
+
+.form form {
+    width: 490px;
+}
+
+.form__heading {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input__container {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 0;
+}
+
+.input__container label {
+    font-family: NoahBold;
+    font-size: 20px;
+    line-height: 130%;
+    margin-bottom: 4px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #b3b6bc; 
+    border-radius: 8px;
+    font-family: Noah;
+    font-size: 20px;
+}
+
+.input.branch {
+    color: grey;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+.menu__branches {
+    width: 100%;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 1px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -3px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.consent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    gap: 6px;
+    line-height: 120%;
+    font-family: Noah;
+    margin-bottom: 24px;
+}
+
+.consent__text {
+    font-size: 16px;
+    width: 100%;
+}
+
+.consent__checkbox {
+    width: 18px;
+    height: 18px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.consent__checkbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.form_img__container {
+    width: 640px;
+    height: 440px;
+}
+
+.error_message,
+.success_message {
+    gap: 3px;
+    display: flex;
+    align-items: center;
+    font-family: Noah;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 115%;
+    margin-top: 4px;
+}
+
+@media screen and (min-width: 1601px) {
+    .form form {
+        width: 700px;
+    }
+
+    .form_img__container {
+        height: 543px;
+        width: 800px;
+    }
+
+    .form_img__container img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+
+    .input__container label {
+        font-size: 18px;
+    }
+    .input{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .form__wrapper {
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        gap: 40px;
+    }
+
+    .form__wrapper form {
+        width: 600px;
+    }
+
+    .form__heading {
+        display: flex;
+        justify-content: start;
+    }
+
+    .form_img__container {
+        order: -1;
+        box-sizing: border-box;
+        width: 100%;
+        aspect-ratio: 9.9 / 5.7;
+        height: auto;
+    }
+
+    .form_img__container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .consent {
+        margin-left: 0;
+        gap: 6px;
+    }
+
+    .consent__checkbox {
+        width: 18px;
+        height: 18px;
+    }
+
+    .consent__text {
+        font-size: 16px;
+    }
+
+    .form_button__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input__container label {
+        font-size: 16px;
+    }
+    .input{
+        width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .form__wrapper form {
+        width: 100%;
+    }
+
+    .form_img__container {
+        aspect-ratio: 6 / 3.5;
+    }
+    .input {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 482px) {
+
+    .form__wrapper {
+        gap: 30px;
+    }
+
+    .form__heading {
+        margin-bottom: 20px;
+    }
+
+    .form_img__container {
+        aspect-ratio: 3 / 1.8;
+        height: auto;
+    }
+
+    .input__container {
+        margin-bottom: 16px;
+    }
+
+    .input {
+        padding: 10px 16px;
+        border-radius: 3px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .consent {
+        gap: 6px;
+        align-items: start;
+        margin-bottom: 40px;
+    }
+
+    .consent__text {
+        width: 70%;
+        line-height: 120%;
+        font-size: 14px;
+    }
+
+    .consent__checkbox {
+        translate: 0;
+    }
+}
